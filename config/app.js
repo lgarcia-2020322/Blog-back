@@ -1,36 +1,29 @@
-import mongoose, { disconnect } from 'mongoose'
+'use strict'
 
-export const connect = async()=>{
+import express from 'express' //Servidor HTTP
+import morgan from 'morgan' //Logs
+import helmet from 'helmet' //Seguridad para HTTP
+import cors from 'cors' //Acceso al API\
+
+import { limiter } from '../middlewares/rate.limit.js'
+
+const configs = (app)=>{
+    app.use(express.json()) 
+    app.use(express.urlencoded({extended: false}))
+    app.use(cors())
+    app.use(helmet())
+    app.use(limiter)
+    app.use(morgan('dev'))
+}
+
+
+export const initServer = async()=>{
+    const app = express() 
     try{
-        mongoose.connection.on('error', ()=>{
-            console.log('MongoDB | Could not be connect to mongodb')
-        })
-        mongoose.connection.on('connecting', ()=>{
-            console.log('MongoDB | try conecting')
-        })
-        mongoose.connection.on('connected', ()=>{
-            console.log('MongoDB | connected to mongodb')
-        })
-        mongoose.connection.once('open', ()=>{
-            console.log('MongoDB | connected to database')
-        })
-        mongoose.connection.on('reconnected', ()=>{
-            console.log('MongoDB | reconnected to mongodb')
-        })
-        mongoose.connection.on('disconnected', ()=>{
-            console.log('MongoDB | disconnected')
-        })
-
-        //Conectarse a la BD
-        await mongoose.connect(
-            `${process.env.DB_SERVICE}://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`,
-            {
-                maxPoolSize: 50, 
-                serverSelectionTimeoutMS: 5000 
-            }
-        )
-
+        configs(app) 
+        app.listen(process.env.PORT)
+        console.log(`Server running in port ${process.env.PORT}`)
     }catch(err){
-        console.error('Database connection failed', err)
+        console.error('Server init failed', err)
     }
 }
