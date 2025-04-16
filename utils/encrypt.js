@@ -1,4 +1,4 @@
-'use strict'
+'use strict' // NO NCESARIO
 import { hash, verify } from 'argon2'
 
 export const encrypt = async(password)=>{
