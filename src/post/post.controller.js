@@ -1,37 +1,66 @@
-import Comentario from './comment.model.js'
-import Publicacion from '../posts/post.model.js'
+import Publicacion from './post.model.js'
+import Curso from '../cursos/course.model.js'
 
-export const agregarComentario = async (req, res)=>{
+export const crearPublicacion = async (req, res)=>{
     const data = req.body
 
-    if(!data.postId || !data.nombreUsuario || !data.contenido){
-        return res.status(400).send({ success: false, message: 'Faltan campos obligatorios' })
+    if(!data.titulo || !data.descripcion || !data.curso){
+        return res.status(400).send({ success: false, message: 'Faltan datos obligatorios' })
     }
 
     try{
-        const postExiste = await Publicacion.findById(data.postId)
-        if(!postExiste){
-            return res.status(404).send({ success: false, message: 'La publicación no existe' })
+        const cursoExiste = await Curso.findById(data.curso)
+        if(!cursoExiste){
+            return res.status(404).send({ success: false, message: 'El curso no existe' })
         }
 
-        const nuevoComentario = new Comentario(data)
-        await nuevoComentario.save()
+        const nuevaPublicacion = new Publicacion(data)
+        await nuevaPublicacion.save()
 
-        return res.send({ success: true, message: 'Comentario agregado correctamente' })
+        return res.send({ success: true, message: 'Publicación creada con éxito' })
     }catch(err){
         console.error(err)
-        return res.status(500).send({ success: false, message: 'Error al agregar comentario', err })
+        return res.status(500).send({ success: false, message: 'Error al crear publicación', err })
     }
 }
 
-export const obtenerComentariosPorPost = async (req, res)=>{
-    const { postId } = req.params
-
+export const obtenerPublicaciones = async (req, res)=>{
     try{
-        const comentarios = await Comentario.find({ postId }).sort({ fechaComentario: -1 })
-        return res.send({ success: true, comentarios })
+        const publicaciones = await Publicacion.find().populate('curso', 'nombre descripcion')
+        return res.send({ success: true, publicaciones })
     }catch(err){
         console.error(err)
-        return res.status(500).send({ success: false, message: 'Error al obtener comentarios', err })
+        return res.status(500).send({ success: false, message: 'Error al obtener publicaciones', err })
+    }
+}
+
+export const obtenerPublicacion = async (req, res)=>{
+    const { id } = req.params
+
+    try{
+        const publicacion = await Publicacion.findById(id).populate('curso', 'nombre descripcion')
+        if(!publicacion){
+            return res.status(404).send({ success: false, message: 'Publicación no encontrada' })
+        }
+        return res.send({ success: true, publicacion })
+    }catch(err){
+        console.error(err)
+        return res.status(500).send({ success: false, message: 'Error al obtener la publicación', err })
+    }
+}
+
+export const actualizarPublicacion = async (req, res)=>{
+    const { id } = req.params
+    const data = req.body
+
+    try{
+        const actualizada = await Publicacion.findByIdAndUpdate(id, data, { new: true })
+        if(!actualizada){
+            return res.status(404).send({ success: false, message: 'Publicación no encontrada' })
+        }
+        return res.send({ success: true, message: 'Publicación actualizada', actualizada })
+    }catch(err){
+        console.error(err)
+        return res.status(500).send({ success: false, message: 'Error al actualizar publicación', err })
     }
 }
