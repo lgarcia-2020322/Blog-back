@@ -1,66 +1,165 @@
-import Publicacion from './post.model.js'
-import Curso from '../cursos/course.model.js'
+import Post from './post.model.js'
 
-export const crearPublicacion = async (req, res)=>{
+export const addPost = async (req, res)=>{
     const data = req.body
-
-    if(!data.titulo || !data.descripcion || !data.curso){
-        return res.status(400).send({ success: false, message: 'Faltan datos obligatorios' })
+    if(!data.title || !data.description){
+        return res.status(400).send(
+            {
+                success: false,
+                message: 'Title and description are required'
+            }
+        )
     }
 
     try{
-        const cursoExiste = await Curso.findById(data.curso)
-        if(!cursoExiste){
-            return res.status(404).send({ success: false, message: 'El curso no existe' })
-        }
+        const newPost = new Post(data)
+        await newPost.save()
 
-        const nuevaPublicacion = new Publicacion(data)
-        await nuevaPublicacion.save()
-
-        return res.send({ success: true, message: 'Publicación creada con éxito' })
+        return res.send(
+            {
+                success: true,
+                message: 'Post created successfully'
+            }
+        )
     }catch(err){
         console.error(err)
-        return res.status(500).send({ success: false, message: 'Error al crear publicación', err })
+        return res.status(500).send(
+            {
+                success: false,
+                message: 'Error creating post',
+                err
+            }
+        )
     }
 }
 
-export const obtenerPublicaciones = async (req, res)=>{
+export const getAllPosts = async (req, res)=>{
     try{
-        const publicaciones = await Publicacion.find().populate('curso', 'nombre descripcion')
-        return res.send({ success: true, publicaciones })
+        const posts = await Post.find({ status: true })
+        return res.send(
+            {
+                success: true,
+                posts
+            }
+        )
     }catch(err){
         console.error(err)
-        return res.status(500).send({ success: false, message: 'Error al obtener publicaciones', err })
+        return res.status(500).send(
+            {
+                success: false,
+                message: 'Error retrieving posts',
+                err
+            }
+        )
     }
 }
 
-export const obtenerPublicacion = async (req, res)=>{
+export const getPostById = async (req, res)=>{
     const { id } = req.params
 
     try{
-        const publicacion = await Publicacion.findById(id).populate('curso', 'nombre descripcion')
-        if(!publicacion){
-            return res.status(404).send({ success: false, message: 'Publicación no encontrada' })
+        const post = await Post.findById(id)
+        if(!post || post.status === false){
+            return res.status(404).send(
+                {
+                    success: false,
+                    message: 'Post not found'
+                }
+            )
         }
-        return res.send({ success: true, publicacion })
+
+        return res.send(
+            {
+                success: true,
+                post
+            }
+        )
     }catch(err){
         console.error(err)
-        return res.status(500).send({ success: false, message: 'Error al obtener la publicación', err })
+        return res.status(500).send(
+            {
+                success: false,
+                message: 'Error retrieving post',
+                err
+            }
+        )
     }
 }
 
-export const actualizarPublicacion = async (req, res)=>{
+export const updatePost = async (req, res)=>{
     const { id } = req.params
     const data = req.body
 
     try{
-        const actualizada = await Publicacion.findByIdAndUpdate(id, data, { new: true })
-        if(!actualizada){
-            return res.status(404).send({ success: false, message: 'Publicación no encontrada' })
+        const post = await Post.findById(id)
+        if(!post || post.status === false){
+            return res.status(404).send(
+                {
+                    success: false,
+                    message: 'Post has been disabled'
+                }
+            )
         }
-        return res.send({ success: true, message: 'Publicación actualizada', actualizada })
+        const updated = await Post.findByIdAndUpdate(id, data, { new: true })
+        return res.send(
+            {
+                success: true,
+                message: 'Post updated successfully',
+                updated
+            }
+        )
     }catch(err){
         console.error(err)
-        return res.status(500).send({ success: false, message: 'Error al actualizar publicación', err })
+        return res.status(500).send(
+            {
+                success: false,
+                message: 'Error updating post',
+                err
+            }
+        )
+    }
+}
+
+export const disablePost = async (req, res)=>{
+    const { id } = req.params
+
+    try{
+        const post = await Post.findById(id)
+        if(!post){
+            return res.status(404).send(
+                {
+                    success: false,
+                    message: 'Post not found'
+                }
+            )
+        }
+
+        if(post.status === false){
+            return res.status(400).send(
+                {
+                    success: false,
+                    message: 'Post is already disabled'
+                }
+            )
+        }
+
+        post.status = false
+        await post.save()
+
+        return res.send(
+            {
+                success: true,
+                message: 'Post disabled successfully'
+            }
+        )
+    }catch(err){
+        console.error(err)
+        return res.status(500).send(
+            {
+                success: false,
+                message: 'Error disabling post',
+                err
+            }
+        )
     }
 }

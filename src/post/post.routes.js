@@ -1,18 +1,37 @@
 import { Router } from 'express'
 import {
-    crearPublicacion,
-    obtenerPublicaciones,
-    obtenerPublicacion,
-    actualizarPublicacion,
-
+    addPost,
+    getAllPosts,
+    getPostById,
+    updatePost,
+    disablePost
 } from './post.controller.js'
 
 const api = Router()
 
-api.post('/Add', crearPublicacion)
-api.get('/All', obtenerPublicaciones)
-api.get('/One/:id', obtenerPublicacion)
-api.put('/Update/:id', actualizarPublicacion)
+api.post(
+    '/Add', 
+    addPost
+)
 
+api.get(
+    '/All', 
+    getAllPosts
+)
+
+api.get(
+    '/One/:id', 
+    getPostById
+)
+
+api.put(
+    '/Update/:id', 
+    updatePost
+)
+
+api.delete(
+    '/Delete/:id', 
+    disablePost
+)
 
 export default api

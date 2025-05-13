@@ -2,24 +2,28 @@ import { Schema, model } from 'mongoose'
 
 const postSchema = Schema(
     {
-        titulo: {
+        title: {
             type: String,
-            required: [true, 'El título es obligatorio'],
-            maxLength: [100, 'No puede exceder los 100 caracteres']
+            required: [true, 'Title is required'],
+            maxLength: [100, 'Title cannot exceed 100 characters']
         },
-        descripcion: {
+        description: {
             type: String,
-            required: false,
-            maxLength: [200, `can't exceed 200 characters`]
+            required: [true, 'Description is required']
         },
-        curso: {
-            type: Schema.Types.ObjectId,
-            ref: 'Curso',
-            required: [true, 'El curso asociado es obligatorio']
-        },
-        fecha: {
+        date: {
             type: Date,
             default: Date.now
+        },
+        course: {
+            type: String,
+            requiered: [true, 'Course is required'],
+            maxLength: [50, 'Title cannot exceed 100 characters']
+        },
+        // ProjectLinks O images DUDA
+        status: {
+            type: Boolean,
+            default: true
         }
     },
     {
@@ -28,4 +32,4 @@ const postSchema = Schema(
     }
 )
 
-export default model('Publicacion', postSchema)
+export default model('Post', postSchema)
