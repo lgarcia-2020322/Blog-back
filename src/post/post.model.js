@@ -17,10 +17,14 @@ const postSchema = Schema(
         },
         course: {
             type: String,
-            requiered: [true, 'Course is required'],
-            maxLength: [50, 'Title cannot exceed 100 characters']
+            required: [true, 'Course is required'],
+            maxLength: [50, 'Course cannot exceed 50 characters']
         },
-        // ProjectLinks O images DUDA
+        link: {
+            type: String,
+            required: false,
+            maxLength: [300, 'Link cannot exceed 300 characters']
+        },
         status: {
             type: Boolean,
             default: true

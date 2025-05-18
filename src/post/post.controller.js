@@ -120,46 +120,31 @@ export const updatePost = async (req, res)=>{
     }
 }
 
-export const disablePost = async (req, res)=>{
+export const deletePost = async (req, res) => {
     const { id } = req.params
 
-    try{
+    try {
         const post = await Post.findById(id)
-        if(!post){
-            return res.status(404).send(
-                {
-                    success: false,
-                    message: 'Post not found'
-                }
-            )
-        }
 
-        if(post.status === false){
-            return res.status(400).send(
-                {
-                    success: false,
-                    message: 'Post is already disabled'
-                }
-            )
-        }
-
-        post.status = false
-        await post.save()
-
-        return res.send(
-            {
-                success: true,
-                message: 'Post disabled successfully'
-            }
-        )
-    }catch(err){
-        console.error(err)
-        return res.status(500).send(
-            {
+        if (!post) {
+            return res.status(404).send({
                 success: false,
-                message: 'Error disabling post',
-                err
-            }
-        )
+                message: 'Post not found'
+            })
+        }
+
+        await Post.findByIdAndDelete(id)
+
+        return res.send({
+            success: true,
+            message: 'Post deleted successfully'
+        })
+    } catch (err) {
+        console.error(err)
+        return res.status(500).send({
+            success: false,
+            message: 'Error deleting post',
+            err
+        })
     }
 }

@@ -4,7 +4,7 @@ import {
     getAllPosts,
     getPostById,
     updatePost,
-    disablePost
+    deletePost
 } from './post.controller.js'
 
 const api = Router()
@@ -30,8 +30,9 @@ api.put(
 )
 
 api.delete(
-    '/Delete/:id', 
-    disablePost
+    '/Delete/:id',
+    deletePost
 )
+
 
 export default api

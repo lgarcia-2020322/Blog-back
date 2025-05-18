@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "category",
+			"name": "Posts",
 			"item": [
 				{
 					"name": "add",
@@ -19,17 +19,478 @@
 							"urlencoded": [
 								{
 									"key": "title",
-									"value": "Calculadora",
+									"value": "Calculadora Científica Avanzada en Java",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Este proyecto es una calculadora científica interactiva desarrollada en Java que permite al usuario realizar una variedad de operaciones matemáticas desde la consola. A través de un menú numérico, el usuario puede seleccionar la operación deseada y proporcionar los valores requeridos.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "Talle",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/Cuarto-Taller-Proyecto1.git",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Ejercicios con Java",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Este conjunto de 11 archivos en Java representa una serie de ejercicios fundamentales de programación, diseñados para fortalecer la comprensión de las estructuras básicas del lenguaje Java. Cada archivo contiene un problema o reto específico, enfocado en aplicar lógica, sintaxis y resolución de problemas en consola.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "Taller",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/Cuarto-Ejercicios-11.git",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Análisis Estadístico de Números Enteros",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Este programa permite al usuario ingresar una cantidad definida de números enteros y luego realiza un análisis estadístico básico que incluye:\n\n- Media (promedio)\n- Mediana (valor central)\n- Moda (número más repetido)\n- Mayor y menor valor\n\nTodo esto se hace desde consola, y los cálculos se aplican sobre un array dinámico lleno con los datos proporcionados por el usuario.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "Taller",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/Cuarto-Bim3.git",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Sistema básico de gestión de contactos (Agenda)",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Este proyecto implementa un sistema básico de gestión de contactos (agenda personal), utilizando una estructura orientada a objetos y el patrón de diseño MVC (Modelo-Vista-Controlador). Permite al usuario:\n\nAgregar personas con datos personales\n\n(Futuro) Actualizar, buscar, eliminar y listar contactos\n\nSe ejecuta por consola con un menú interactivo, donde el usuario elige una opción, y la aplicación reacciona en consecuencia.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "Taller",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/Cuarto-Persona.git",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Sistema de Venta de Vehículos",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Este proyecto consiste en una aplicación de consola en Java orientada a gestionar el proceso de venta de vehículos. El sistema permite registrar vehículos, capturar datos del cliente, generar facturas y realizar búsquedas o filtrados básicos.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "Taller",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/Cuarto-Sistema-de-Venta-de-Veh-culos.git",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Sistema de Gestión de Ventas de Teléfonos",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Este proyecto es una aplicación desarrollada en Java orientada a la simulación de un sistema de ventas de teléfonos celulares. Está pensado como una herramienta para gestionar de forma sencilla el inventario de dispositivos disponibles, el registro de clientes, y el proceso de venta de equipos móviles.\n\nEl sistema está estructurado con enfoque en la programación orientada a objetos (POO), implementando clases como Telefono, Cliente, y Venta, así como un menú interactivo para guiar al usuario a través de las opciones. Los teléfonos almacenan atributos como marca, modelo, precio, almacenamiento, RAM, y disponibilidad; mientras que las ventas registran la relación entre cliente y dispositivo vendido, incluyendo el total pagado y la fecha.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "Taller",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/Cuarto-Sistema-de-Gesti-n-de-Ventas-de-Tel-fonos.git",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Juego de Damas",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Este proyecto es una simulación simplificada de un juego de damas entre un jugador y la computadora, usando Java y consola. El tablero es de 8x8 y cada jugador alterna turnos seleccionando una casilla. El jugador usa la ficha 'X' y la computadora 'O'.\n\nEl sistema valida si una casilla está ocupada y evita movimientos inválidos. Aunque no implementa la lógica completa del juego de damas tradicional (como capturas o movimiento diagonal), sí gestiona el turno por turno, el conteo de jugadas y un empate cuando el tablero se llena.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "Taller",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/Cuarto-JuegoDamas.git",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Juego de Ajedrez",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Este proyecto consiste en un sistema completo que simula el comportamiento interno de un juego de ajedrez, implementado completamente en Java. Utiliza principios de programación orientada a objetos y modela las reglas fundamentales del ajedrez, como los movimientos válidos de piezas, el control de turnos, la detección de jaque y jaque mate, y la promoción de peones.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "Taller",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/Cuarto-Ajedrez.git",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Sistema de Gestión para Constructora en Java",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Este proyecto simula el funcionamiento administrativo básico de una empresa constructora utilizando programación orientada a objetos en Java. Está diseñado para registrar y gestionar los principales elementos que intervienen en una obra de construcción: proyectos, trabajadores, materiales y clientes.\n\nLa aplicación se ejecuta por consola y presenta un menú interactivo para navegar entre las distintas funcionalidades del sistema. Está estructurada con clases bien definidas como Proyecto, Cliente, Trabajador y Material, y opcionalmente se puede usar una clase Controlador para manejar toda la lógica operativa.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "Taller",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/Cuarto-Constructora.git",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Sistema de Gestión de Proyectos para Constructora",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Este proyecto simula el funcionamiento interno de una empresa constructora mediante una aplicación desarrollada en Java. El sistema permite registrar, consultar y administrar información clave sobre proyectos de construcción, incluyendo sus responsables, materiales utilizados, costos y avance.\n\nLa solución está diseñada con un enfoque modular y orientado a objetos, utilizando clases específicas para representar entidades como Proyecto, Cliente, Trabajador, Material, entre otras. Cada módulo puede ser operado a través de menús por consola, permitiendo una interacción sencilla para el usuario.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "Tecnología",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/Cuarto-Glosario.git",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Sistema de Gestión Administrativa para una Constructora – MySQL",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Este proyecto consiste en la creación de una base de datos relacional diseñada para cubrir la gestión administrativa de una empresa constructora. Incluye la definición de múltiples tablas, relaciones entre ellas y el desarrollo de procedimientos almacenados que automatizan tareas comunes como agregar, listar, buscar, actualizar y eliminar registros.\n\nEl diseño busca representar entidades clave de una constructora: empleados, departamentos, clientes, proveedores, cuentas por pagar y cobrar, horarios de trabajo, administración, entre otras. Además, el sistema permite gestionar locales en renta y mantener el control financiero mediante el seguimiento de facturas, pagos y saldos.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "Taller",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/Quinto-ProyectoMySQL.git",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Sistema de Ventas en Java con Patrón DAO",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Este proyecto es una aplicación de consola (o extendible a GUI) desarrollada en Java, que simula un sistema de ventas aplicando buenas prácticas de programación, especialmente el patrón DAO (Data Access Object) para separar la lógica de acceso a datos de la lógica de negocio.\n\nEl sistema permite gestionar clientes, productos y ventas, manteniendo una estructura limpia, escalable y fácil de mantener. Cada entidad (cliente, producto, venta) cuenta con su propia clase de modelo, una interfaz DAO y una implementación que se encarga de interactuar con la base de datos.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "Taller",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/Quinto-VentasJava.git",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Página Web Informativa sobre Ferrari",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Este proyecto es una aplicación de consola (o extendible a GUI) desarrollada en Java, que simula un sistema de ventas aplicando buenas prácticas de programación, especialmente el patrón DAO (Data Access Object) para separar la lógica de acceso a datos de la lógica de negocio.\n\nEl sistema permite gestionar clientes, productos y ventas, manteniendo una estructura limpia, escalable y fácil de mantener. Cada entidad (cliente, producto, venta) cuenta con su propia clase de modelo, una interfaz DAO y una implementación que se encarga de interactuar con la base de datos.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "TICS",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/Quinto-PaginaWeb.git",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Sistema de Biblioteca Aura",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Biblioteca Aura es un sistema desarrollado en Java para la gestión interna de una biblioteca escolar o institucional. El proyecto permite organizar la información relacionada con libros, usuarios y préstamos, todo mediante una estructura modular basada en programación orientada a objetos (POO).\n\nEl sistema está pensado para funcionar como una aplicación de consola, donde un menú interactivo guía al usuario a través de las distintas funcionalidades. También se puede escalar fácilmente a una interfaz gráfica o conectarse con bases de datos.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "Taller",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/Quinto-BibliotecaAura.git",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Agenda Web",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Este proyecto es una aplicación web desarrollada con HTML, CSS y JavaScript, que simula una agenda personal digital. Permite a los usuarios registrar contactos, marcar favoritos, acceder a su perfil y gestionar sus datos personales a través de una interfaz simple y amigable.\n\nLa aplicación es totalmente funcional desde el navegador y utiliza JavaScript puro (sin frameworks) para controlar la lógica, la navegación entre secciones y la persistencia temporal de datos usando localStorage.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "Práctica Supervisada",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/Sexto-AgendaWeb.git",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Sistema de Gestión Escolar",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Este proyecto es una aplicación web básica desarrollada con HTML, CSS y JavaScript, diseñada para simular un sistema de gestión de alumnos en una institución educativa. Permite registrar estudiantes, asignarles cursos, ver sus perfiles, y editar o eliminar sus datos de manera sencilla y completamente desde el navegador.\n\nEl sistema no requiere base de datos externa, ya que utiliza localStorage para almacenar los datos de forma persistente mientras el navegador no los borre. Está enfocado en la práctica de lógica de programación, manipulación del DOM y gestión de datos en el frontend.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "Práctica Supervisada",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/Sexto-GestionDeAlumnos.git",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Gestor Opiniones",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Este proyecto consiste en una aplicación web desarrollada con HTML, CSS y JavaScript, que permite a los usuarios publicar, visualizar, editar y eliminar opiniones o comentarios de forma sencilla. Es una plataforma básica de gestión de contenido, útil para simular secciones de \"testimonios\", \"reseñas\" o \"comentarios de usuarios\" sin necesidad de un servidor backend.\n\nEl sistema guarda los datos directamente en el navegador utilizando localStorage, lo que lo convierte en una herramienta funcional y liviana, ideal para proyectos educativos o demostrativos.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "Práctica Supervisada",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/Gestor-Opiniones.git",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Réplica del Sitio Web de Kinal",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Este proyecto consiste en una aplicación web desarrollada con HTML, CSS y JavaScript, que permite a los usuarios publicar, visualizar, editar y eliminar opiniones o comentarios de forma sencilla. Es una plataforma básica de gestión de contenido, útil para simular secciones de \"testimonios\", \"reseñas\" o \"comentarios de usuarios\" sin necesidad de un servidor backend.\n\nEl sistema guarda los datos directamente en el navegador utilizando localStorage, lo que lo convierte en una herramienta funcional y liviana, ideal para proyectos educativos o demostrativos.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "Taller",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/Sexto-ReplicaKinal.git",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "COPEREX",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Este proyecto simula un sistema de gestión para COPEREX (Corporación para la Producción y Exhibición de Ferias en Guatemala), una entidad dedicada a la organización de ferias, exposiciones y eventos a nivel nacional. El sistema fue desarrollado como una solución educativa o empresarial, utilizando tecnologías como Java o HTML/CSS/JS (dependiendo del enfoque), con el objetivo de digitalizar y optimizar procesos internos.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "Taller",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/COPEREX.git",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Sistema de Gestión de Ventas ",
 									"type": "text"
 								},
 								{
 									"key": "description",
-									"value": "Calculadora hecha con JS ",
+									"value": "Este proyecto es un backend completo para un sistema de ventas, desarrollado utilizando Node.js con el framework Express y la base de datos MongoDB. El sistema está diseñado para manejar la lógica y almacenamiento de datos relacionados con productos, usuarios, carrito de compras y facturación, ofreciendo una API RESTful lista para conectarse con un frontend (como React, Vue o cualquier cliente HTTP).\n\nEstá estructurado en base a buenas prácticas de desarrollo backend, aplicando principios como separación por módulos (modelos, controladores, rutas), uso de middlewares, y validaciones de datos.",
 									"type": "text"
 								},
 								{
 									"key": "course",
-									"value": "mate",
+									"value": "Taller",
+									"type": "text"
+								},
+								{
+									"key": "link",
+									"value": "https://github.com/lgarcia-2020322/proyecto-bimestre1-parte1.git",
 									"type": "text"
 								}
 							]
